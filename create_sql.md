@@ -16,7 +16,7 @@
     payment_method VARCHAR(50)
 ); */
 
-- - CREATING PRODUCERS TABLE
+- -CREATING PRODUCERS TABLE
 
 /* CREATE TABLE super_mart.producers(
     trans_id INT,
@@ -26,7 +26,7 @@
     purch_date INT
 ); */
 
-- - CREATING LOCATIONS TABLE
+- -CREATING LOCATIONS TABLE
 
 /*CREATE TABLE super_mart.locations(
     trans_id INT,

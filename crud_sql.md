@@ -31,6 +31,8 @@ truncate table orders; --deletes data from the orders table but not the structur
 
 select * from customers; ---displays all data from customers table
 
+select cust_name where cust_id =1003;  --displays the cust_name using cust_id
+
 ##update operation
 update customers
 set cust_name="vikas", contact_no=9701619073 
@@ -60,3 +62,5 @@ select * from locations                               ---displays all the data f
 update locations set city="warangal" where cust_id=1004 ---updates city column value to warangal where cust_id=1004
 delete from customers where cust_id=1005              ----deletes a row where cust_id=1005
 truncate table locations;                             ---deletes all the data from locations table but not structure
+
+select postal_code from locations where city = "hyderabad";

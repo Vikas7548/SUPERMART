@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Super Mart DBMS Project</title> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+    </head>
+
+
+    <body>
+
+        <div class="banner">
+            <div class = "logo">
+                <h1>SUPER MART</h1>
+            </div>
+            <div class="Query-Form">
+                <form action="{{ url_for("index")}}" method="post">
+                    <label style="color:#f0fff9">CUSTOMER ID: </label><br>
+                    <input type = "text" name = "cust_id" placeholder = "CUSTOMER ID" id = "cust_id" ><br>
+                    <label style="color:#f0f4ff">Location: </label><br>
+                    <input type = "text" name = "location" placeholder = "State Name" id = "location" ><br>
+                    <label style="color:#f0fff8">Trans_Id: </label><br>
+                    <input type = "text" name = "trans_id" placeholder = "Trans ID" id = "trans_id" ><br>
+                    <label style="color:#f0f8ff">Product Category: </label><br>
+                    <input type = "text" name = "prod_category" placeholder = "Product Category" id = "prod_category" ><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+
+            <div class = tables>
+
+                <table>
+                    <tr>
+                        {% for header in headings %}
+                        <th> {{ header }}</th>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for cell in data %}
+                        <td>{{ cell }}</td>
+                        {% endfor %}
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </body>
+
+</html>
